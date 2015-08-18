@@ -1,0 +1,14 @@
+{
+  "comment_for_emacs":{
+    "message":"-*- coding: utf-8-unix -*-"
+  },
+  "ACdownload_name":{
+    "message":"AirCampusポータル ダウンロード エクステンダー"
+  },
+  "ACdownload_description":{
+    "message":"AirCampusポータルにダウンロード機能追加します"
+  },
+  "chrome_extension_name":{
+    "message":"ACダウンロード"
+  }
+}

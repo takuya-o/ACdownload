@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "short_name": "ACdownload",
+  "name": "__MSG_ACdownload_name__",
+  "description": "__MSG_ACdownload_description__",
+  "author": "Takuya Ono",
+  "version": "0.0.1.0",
+  "minimum_chrome_version": "37",
+
+  "permissions": [ ],
+  "content_scripts": [ {
+    "matches": [ "http://accontent.bbt757.com/content/*" ],
+    "js": ["lib/prototype.js", "lib/tagmanager.js", "ACdownload.js"],
+    "run_at": "document_end"
+  } ],
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
+  "icons": {
+    "128": "icon_128.png",
+    "48": "icon_48.png",
+    "19": "icon_19.png",
+    "16": "icon_16.png"
+  },
+  "default_locale": "en"
+}

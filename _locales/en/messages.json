@@ -1,0 +1,14 @@
+{
+  "comment_for_emacs":{
+    "message":"-*- coding: utf-8-unix -*-"
+  },
+  "ACdownload_name":{
+    "message":"AirCampus Potal Download Extender"
+  },
+  "ACdownload_description":{
+    "message":"Extend download capability on AirCampus Potal"
+  },
+  "chrome_extension_name":{
+    "message":"AC download"
+  }
+}
