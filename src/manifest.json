@@ -1,12 +1,11 @@
 {
   "manifest_version": 2,
-  "short_name": "ACdownload",
+  "short_name": "AC download",
   "name": "__MSG_ACdownload_name__",
   "description": "__MSG_ACdownload_description__",
   "author": "Takuya Ono",
-  "version": "0.0.1.0",
+  "version": "0.0.1.2",
   "minimum_chrome_version": "37",
-
   "permissions": [ ],
   "content_scripts": [ {
     "matches": [ "http://accontent.bbt757.com/content/*" ],
@@ -21,5 +20,5 @@
     "19": "icon_19.png",
     "16": "icon_16.png"
   },
-  "default_locale": "en"
+  "default_locale": "ja"
 }

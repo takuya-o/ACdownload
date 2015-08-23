@@ -4,20 +4,20 @@
 require 'rubygems'
 require 'crxmake'
 
-CrxMake.make(
-  :ex_dir => ".",
-  :pkey   => "./ACdownload-crxmake.pem",
-  :crx_output => "./ACex.crx",
-  :verbose => true,
-  :ignorefile => /(\.swp|.*~|\..*|\.(pem|crx|zip|md|rb))/,
-  :ignoredir => /\.(?:svn|git|cvs|nbproject|test|config|resource)/
-)
+# CrxMake.make(
+#    :ex_dir => "./src",
+#    :pkey   => "./ACdownload.pem",
+#    :crx_output => "./ACdownload.crx",
+#    :verbose => true,
+#    :ignorefile => /(.*\.swp|.*~|.*\.(pem|crx|zip|md|rb|sh|gitignore))/,
+#    :ignoredir => /(\.(?:svn|git|cvs))|(nbproject|test|config|resource|for*)/
+#  )
 
 CrxMake.zip(
-  :ex_dir => ".",
+  :ex_dir => "./src",
   :pkey   => "./ACdownload.pem",
-  :zip_output => "./ACex.zip",
+  :zip_output => "./ACdownload.zip",
   :verbose => true,
-  :ignorefile => /(\.swp|.*~|\..*|\.(pem|crx|zip|md|rb))/,
-  :ignoredir => /\.(?:svn|git|cvs|nbproject|test|config|resource)/
+  :ignorefile => /(.*\.swp|.*~)/,
+  :ignoredir => /\.(?:svn|cvs)/
 )

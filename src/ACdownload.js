@@ -7,8 +7,7 @@
         this.start();
       }.bind(this));
     },
-    start: function() {
-      //視聴画面の時
+    start: function() {  //視聴画面の時
       var settings = this.getSettings();
       if ( settings ) { //セッティング情報が見つかったら
         //Videoダウンロード表示
@@ -55,9 +54,11 @@
             aElement.innerHTML = sources[i].label;
             tab.insert({top: aElement});
           }
+        } else {
+            console.log("ACdownload: Can not find the tab.");
         }
       } else {
-        console.log("ACdownload: Video source informatin"); //failsafe
+        console.log("ACdownload: Can not find Video source information");
       }
     },
     end: function() {
