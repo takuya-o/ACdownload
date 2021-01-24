@@ -18,6 +18,6 @@ CrxMake.zip(
   :pkey   => "./ACdownload.pem",
   :zip_output => "./ACdownload.zip",
   :verbose => true,
-  :ignorefile => /(.*\.swp|.*~)/,
-  :ignoredir => /\.(?:svn|cvs)/
+  :ignorefile => /(\.swp|.*~|\.ts|\.map)/,
+  :ignoredir => /\.(?:svn|git|cvs|AppleDouble)/
 )

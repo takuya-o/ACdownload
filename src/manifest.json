@@ -4,7 +4,7 @@
   "name": "__MSG_ACdownload_name__",
   "description": "__MSG_ACdownload_description__",
   "author": "Takuya Ono",
-  "version": "1.3.2019.6061",
+  "version": "1.4.2021.1240",
   "minimum_chrome_version": "37",
   "permissions": [ ],
   "content_scripts": [ {
@@ -14,6 +14,11 @@
       "*://www.ohmae.ac.jp/content/*" ],
     "js": ["lib/prototype.js", "lib/tagmanager.js", "ACdownload.js"],
     "run_at": "document_end"
+  },
+  {
+    "matches": ["https://player.aircamp.us/content/*"],
+    "js": [ "lib/tagmanager.js", "PlayerExtender.js" ],
+    "run_at": "document_idle"
   } ],
   "content_security_policy":
     "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
