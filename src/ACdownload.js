@@ -3,7 +3,7 @@
   console.log("--- Start ACdownload ---");
   var ContentScript = Class.create({
     initialize: function() {
-      window.addEventListener("load", function(evt) {
+      window.addEventListener("load", function() {
         this.start();
       }.bind(this));
     },
@@ -42,7 +42,7 @@
         if (tab) { //入れるの早すぎると消されるがリロードで出てくる
           for(var i=0; i<sources.length; i++ ) {
             console.log("ACdownload: Video source " + sources[i].label );
-            var title = sources[i].file.match(".+/(.+?)([\?#;].*)?$")[1];
+            var title = sources[i].file.match(".+/(.+?)([?#;].*)?$")[1];
             var titles = window.document.getElementsByTagName("title");
             if (titles) {
               title = titles[0].innerText.replace(/ の配信は.*から/,"")

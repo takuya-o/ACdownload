@@ -1,11 +1,11 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "short_name": "AC download",
   "name": "__MSG_ACdownload_name__",
   "description": "__MSG_ACdownload_description__",
   "author": "Takuya Ono",
-  "version": "1.4.2021.1240",
-  "minimum_chrome_version": "37",
+  "version": "1.4.2022.4110",
+  "minimum_chrome_version": "88",
   "permissions": [ ],
   "content_scripts": [ {
     "matches": [
@@ -20,8 +20,9 @@
     "js": [ "lib/tagmanager.js", "PlayerExtender.js" ],
     "run_at": "document_idle"
   } ],
-  "content_security_policy":
-    "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; object-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'https://www.googletagmanager.com' 'https://www.google-analytics.com';"
+  },
   "icons": {
     "128": "icon_128.png",
     "48": "icon_48.png",
